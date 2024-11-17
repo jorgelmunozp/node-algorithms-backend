@@ -1,4 +1,38 @@
 /*
+
+Starting with a 1-indexed array of zeros and a list of operations, for each operation add a value to each the array element between two given indices, inclusive. Once all operations have been performed, return the maximum value in the array.
+
+Queries are interpreted as follows:
+    a b k
+    1 5 3
+    4 8 7
+    6 9 1
+
+Function Description
+
+arrayManipulation has the following parameters:
+- int n - the number of elements in the array
+- int queries[q][3] - a two dimensional array of queries where each queries[i] contains three integers, a, b, and k.
+
+Returns
+int - the maximum value in the resultant array
+
+Sample Input
+5 3
+1 2 100
+2 5 100
+3 4 100
+
+Sample Output
+200
+
+Explanation
+After the first update the list is 100 100 0 0 0.
+After the second update list is 100 200 100 100 100.
+After the third update list is 100 200 200 200 100.
+
+The maximum value is 200.
+
  * Complete the 'arrayManipulation' function below.
  *
  * The function is expected to return a LONG_INTEGER.
@@ -42,7 +76,6 @@ function main(input) {
     }
 
     return arrayManipulation(n, queries);
-
 }
 
 console.log( 

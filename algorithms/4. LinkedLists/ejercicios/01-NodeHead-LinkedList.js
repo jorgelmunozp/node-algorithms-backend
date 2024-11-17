@@ -53,11 +53,18 @@ const SinglyLinkedList = class {
     }
 };
 
-function printSinglyLinkedList(node) {
+function printSinglyLinkedList(node,sep) {
+    let response = ""
     while (node != null) {
-        console.log(String(node.data));
+        response = response + String(node.data)
         node = node.next;
+
+        if (node != null) {
+            response = response + sep
+        }
     }
+
+    console.log( response );
 }
 
 // Complete the insertNodeAtHead function below.
@@ -92,7 +99,7 @@ function main(input) {
       	llist.head = llist_head;
     }
 
-    printSinglyLinkedList(llist.head);
+    printSinglyLinkedList(llist.head,"\n");
 
 }
 
