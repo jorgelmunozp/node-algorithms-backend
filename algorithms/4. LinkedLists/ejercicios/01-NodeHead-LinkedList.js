@@ -1,5 +1,7 @@
 // https://www.hackerrank.com/challenges/insert-a-node-at-the-head-of-a-linked-list/problem
 /*
+INSERT A NODE A NODE AT THE HEAD OF A LINKED LIST
+
 Given a pointer to the head of a linked list, insert a new node before the head. 
 The next value in the new node should point to head 
 and the data value should be replaced with a given value. 
