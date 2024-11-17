@@ -61,7 +61,7 @@ function printSinglyLinkedList(node,sep) {
     console.log( response );
 }
 
-// Complete the insertNodeAtHead function below.
+// Complete the insertNodeAtTail function below.
 
 /*
  * For your reference:

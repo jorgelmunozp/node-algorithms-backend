@@ -1,31 +1,32 @@
-// https://www.hackerrank.com/challenges/insert-a-node-at-a-specific-position-in-a-linked-list/problem
+// https://www.hackerrank.com/challenges/delete-a-node-from-a-linked-list/problem
 /*
-INSERT A NODE AT A SPECIFIC POSITION IN A LINKED LIST
+DELETE A NODE FROM A LINKED LIST
 
-Given the pointer to the head node of a linked list and an integer to insert at a certain position, create a new node with the given integer as its data attribute, insert this node at the desired position and return the head node.
-
-A position of 0 indicates head, a position of 1 indicates one node away from the head and so on. The head pointer given may be null meaning that the initial list is empty.
+Delete the node at a given position in a linked list and return a reference to the head node. The head is at position 0. The list may be empty after you delete the node. In that case, return a null value.
 
 Function Description 
 
-insertNodeAtPosition has the following parameters:
-- head: a SinglyLinkedListNode pointer to the head of the list
-- data: an integer value to insert as data in your new node
-- position: an integer position to insert the new node, zero based indexing
+deleteNode has the following parameters:
+- SinglyLinkedListNode pointer llist: a reference to the head node in the list
+- int position: the position of the node to remove
 
 Returns
-SinglyLinkedListNode pointer: a reference to the head of the revised list
+SinglyLinkedListNode pointer: a reference to the head of the modified list
 
 Sample Input
-3
-16
-13
-7
-1
+8
+20
+6
 2
+19
+7
+4
+15
+9
+3
 
 Sample Output
-16 13 1 7
+20 6 2 7 4 15 9
 */
 
 const SinglyLinkedListNode = class {
@@ -68,7 +69,7 @@ function printSinglyLinkedList(node,sep) {
     console.log( response );
 }
 
-// Complete the insertNode function below.
+// Complete the 'deleteNode' function below.
 
 /*
  * For your reference:
