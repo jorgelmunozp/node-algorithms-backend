@@ -80,18 +80,20 @@ function printSinglyLinkedList(node,sep) {
  * }
  *
  */
-function insertNodeAtPosition(llist, data, position) {
+function deleteNode(llist, position) {
     // Write your code here
-    let index = 1
+    if( position === 0) { return llist.next }
+    let index = 0;
     let current = llist
+    let previous = null
     
     while( current.next !== null ) {
-        if( index === position) {
-            let node = new SinglyLinkedListNode(data,null)
-            node.next = current.next
-            current.next = node
-        } 
-        else { current = current.next }
+        if( index === position ) {
+            previous.next = current.next
+        } else {
+            previous = current
+            current = current.next
+        }
         index++
     }
     
@@ -115,17 +117,21 @@ function main(input) {
     const data = parseInt( input[input.length - 2] )
     const position = parseInt( input[input.length - 1] )
 
-    let llist_head = insertNodeAtPosition(llist.head, data, position)
+    let llist_head = deleteNode(llist.head, position)
 
     printSinglyLinkedList(llist_head," ");
 
 }
 
-main(`3
-16
-13
+main(`8
+20
+6
+2
+19
 7
-1
-2`) 
+4
+15
+9
+3`) 
 
 module.exports = main;
