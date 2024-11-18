@@ -93,13 +93,13 @@ function CompareLists(llist1, llist2) {
     let current2 = llist2
     let equals = true
 
-    while( current1.next !== null || current2.next !== null ) {
-       if( current1.data !== current2.data ) { equals = false; break; }
-       if( current1.next !== null ){ current1 = current1.next; count1++ }
-       if( current2.next !== null ){ current2 = current2.next; count2++ }       
+    while ( current1.next || current2.next ) {
+       if ( current1.data !== current2.data ) { equals = false; break; }
+       if ( current1.next ){ current1 = current1.next; count1++ }
+       if ( current2.next ){ current2 = current2.next; count2++ }       
     }
 
-    if( count1 === count2 && equals === true ) { return 1 }
+    if ( count1 === count2 && equals === true ) { return 1 }
     else { return 0 }
 }
 

@@ -73,7 +73,7 @@ function printSinglyLinkedList(node,sep) {
  *
  */
 function insertNodeAtTail(head, data) {
-    if( head === null ) {
+    if ( head === null ) {
         head = new SinglyLinkedListNode(data, null)
     } else {
         let current = head

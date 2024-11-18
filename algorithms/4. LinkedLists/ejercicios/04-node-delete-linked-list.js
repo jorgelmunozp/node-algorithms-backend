@@ -82,13 +82,13 @@ function printSinglyLinkedList(node,sep) {
  */
 function deleteNode(llist, position) {
     // Write your code here
-    if( position === 0) { return llist.next }
+    if ( position === 0) { return llist.next }
     let index = 0;
     let current = llist
     let previous = null
     
-    while( current.next !== null ) {
-        if( index === position ) {
+    while ( current.next !== null ) {
+        if ( index === position ) {
             previous.next = current.next
         } else {
             previous = current
