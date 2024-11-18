@@ -109,12 +109,9 @@ function main(input) {
 
     for (let i = 1; i <= llistCount; i++) {
         const llistItem = input[i];
-    	// const llist_head = insertNodeAtPosition(llist.head, data, position);
-      	// llist.head = llist_head;
         llist.insertNode(llistItem);
     }
 
-    const data = parseInt( input[input.length - 2] )
     const position = parseInt( input[input.length - 1] )
 
     let llist_head = deleteNode(llist.head, position)
