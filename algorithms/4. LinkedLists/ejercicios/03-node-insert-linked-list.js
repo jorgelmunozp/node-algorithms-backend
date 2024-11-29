@@ -106,8 +106,6 @@ function main(input) {
 
     for (let i = 1; i <= llistCount; i++) {
         const llistItem = input[i];
-    	// const llist_head = insertNodeAtPosition(llist.head, data, position);
-      	// llist.head = llist_head;
         llist.insertNode(llistItem);
     }
 
